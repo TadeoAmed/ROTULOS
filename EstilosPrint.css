@@ -1,0 +1,70 @@
+
+label{
+    display : none;
+}
+/* 
+#botonImprimir{
+    display: none;
+} */
+
+.btn{
+    display: none;
+}
+
+#tabla{
+    width: 0%;
+}
+
+
+h1{
+    display: none;
+}
+
+h2{
+    display: none;
+}
+
+
+#numero{
+    line-height: 1cm; 
+}
+
+#nombre1{
+    line-height: 3cm; 
+}
+
+#numero1{
+    line-height: 1cm; 
+}
+
+#nombre2{
+    line-height: 3cm; 
+}
+
+#numero2{
+    line-height: 1cm; 
+}
+
+#nombre3{
+    line-height: 3cm; 
+}
+
+#numero3{
+    line-height: 1cm; 
+}
+
+.inp{
+    font-size: 36pt;
+    font: 'Times New Roman';
+    font-weight: bold;
+    border: 0;
+    text-align: center;
+}
+@page{
+    size: 21cm 15cm;
+    margin-left:10mm;
+    margin-top: 10mm;
+    margin-bottom: 10mm;
+    margin-right: 10mm;
+}
+

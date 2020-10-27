@@ -1,0 +1,117 @@
+<head>
+    <title>ROTULOS</title>
+    <link rel="stylesheet" type="text/css" href="EstilosPrint.css" media="print">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"> </script>
+</head>
+<body id="cuerpo">
+    <h1>ROTULOS</h1>
+    <h2>Ingrese los siguientes datos:</h2>
+    <form id="myformulario">
+        <table id="tabla">
+        <tbody>
+        <tr>
+        <td><label >Número etiqueta:</label></td>  
+        <td><input name="Numero etiqueta" maxlength="255" type="text"  id= "numero" class="inp"/></td>
+        </tr>
+        <tr>
+        <td><label>Nombre local:</label></td>
+        <td><input name="Nombre local" maxlength="255"  type="text"  id="nombre"  class="inp" /></td>
+        </tr>
+        <tr>
+        <td><label >Número etiqueta:</label></td>
+        <td><input name="Numero etiqueta" maxlength="255" type="text"  id= "numero2"  class="inp" readonly/></td>
+        </tr>
+        <tr>
+        <td><label>Nombre local:</label></td>
+        <td><input name="Nombre local" maxlength="255"  type="text"  id="nombre2"  class="inp" readonly /></td>
+        </tr>
+        <tr>
+        <td><label >Número etiqueta:</label></td>  
+        <td><input name="Numero etiqueta" maxlength="255" type="text"  id= "numero3"  class="inp" readonly /></td>
+        </tr>
+        <tr>
+        <td><label>Nombre local:</label></td>
+        <td><input name="Nombre local" maxlength="255"  type="text"  id="nombre3" class="inp" readonly /></td>
+        </tr>
+        <tr>
+        <td><p align="center"><input type="button"  value="Imprimir" id="botonImprimir" class="btn" ></p></td>
+        </tr>
+        <tr> 
+            <td><p align="center"><input type="button"  value="Generar nueva etiqueta" id="botonGenerar" class="btn"  onclick="location.reload()"></p></td>
+        </tr>
+    </tbody>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+     
+
+     $(document).ready(function () {
+        $("#numero").keyup(function () {
+            var value = $(this).val();
+            $("#numero2").val(value);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#nombre").keyup(function () {
+            var value = $(this).val();
+            $("#nombre2").val(value);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#nombre").keyup(function () {
+            var value = $(this).val();
+            $("#nombre3").val(value);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#numero").keyup(function () {
+            var value = $(this).val();
+            $("#numero3").val(value);
+        });
+    });
+
+     $(document).ready(function(){
+         
+        
+        $('#botonImprimir').click(function(){  // al presionar print, va a tomar el formato de impresion del CSS file y mostrar 3 veces el contenido de los input text 
+        
+
+             
+        $(document.getElementsByTagName('label')).css({"display":"none"});
+        $(document.getElementsByTagName('h1')).css({"display":"none"});
+        $(document.getElementsByTagName('h2')).css({"display":"none"});
+
+
+
+       // $(document.getElementsByTagName('')).css({"display":"none"});
+
+         var num = $(document.getElementById('numero')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+         var nomb = $(document.getElementById('nombre')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+         var num2 =   $(document.getElementById('numero2')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+         var nomb = $(document.getElementById('nombre2')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+         var num2 =   $(document.getElementById('numero3')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+         var nomb = $(document.getElementById('nombre3')).css({"font-size":"38pt","font-weight": "bold", "font": "'Times New Roman'", "border": "0", "text-align": "center"});
+
+
+
+        $('#cuerpo').show();
+        window.print();
+        
+        });
+    });
+
+    // BLANQUEAR INPUTS
+    // $(document).ready(function() {
+    // $('#botonGenerar').click(function() {
+    // $('input[type="text"]').val('');
+    //     });
+    // });
+
+    </script>
+</body>
